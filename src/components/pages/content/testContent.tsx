@@ -13,7 +13,7 @@ import {
 } from "../../markdown/list.tsx";
 import { Blockquote } from "../../markdown/blockquote.tsx";
 import { Codeblock } from "../../markdown/codeblock.tsx";
-import { InlineCode } from "../../markdown/inlinecode.tsx";
+import { InlineCode } from "../../markdown/inlineCode.tsx";
 
 export function TestContent() {
   // Assume we are creating this from markdown
