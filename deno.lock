@@ -1,12 +1,14 @@
 {
   "version": "4",
   "specifiers": {
+    "npm:@solidjs/router@*": "0.14.10_solid-js@1.9.4__seroval@1.2.0",
     "npm:@solidjs/router@~0.14.10": "0.14.10_solid-js@1.9.4__seroval@1.2.0",
     "npm:sass@^1.83.1": "1.83.1",
+    "npm:solid-js@*": "1.9.4_seroval@1.2.0",
     "npm:solid-js@^1.9.3": "1.9.4_seroval@1.2.0",
     "npm:typescript@~5.6.2": "5.6.3",
-    "npm:vite-plugin-solid@^2.11.0": "2.11.0_solid-js@1.9.4__seroval@1.2.0_vite@6.0.7_@babel+core@7.26.0",
-    "npm:vite@^6.0.5": "6.0.7"
+    "npm:vite-plugin-solid@^2.11.0": "2.11.0_solid-js@1.9.4__seroval@1.2.0_vite@6.0.7__sass@1.83.1_@babel+core@7.26.0_sass@1.83.1",
+    "npm:vite@^6.0.7": "6.0.7_sass@1.83.1"
   },
   "npm": {
     "@ampproject/remapping@2.3.0": {
@@ -686,7 +688,7 @@
     "validate-html-nesting@1.2.2": {
       "integrity": "sha512-hGdgQozCsQJMyfK5urgFcWEqsSSrK63Awe0t/IMR0bZ0QMtnuaiHzThW81guu3qx9abLi99NEuiaN6P9gVYsNg=="
     },
-    "vite-plugin-solid@2.11.0_solid-js@1.9.4__seroval@1.2.0_vite@6.0.7_@babel+core@7.26.0": {
+    "vite-plugin-solid@2.11.0_solid-js@1.9.4__seroval@1.2.0_vite@6.0.7__sass@1.83.1_@babel+core@7.26.0_sass@1.83.1": {
       "integrity": "sha512-G+NiwDj4EAeUE0wt3Ur9f+Lt9oMUuLd0FIxYuqwJSqRacKQRteCwUFzNy8zMEt88xWokngQhiFjfJMhjc1fDXw==",
       "dependencies": [
         "@babel/core",
@@ -699,16 +701,17 @@
         "vitefu"
       ]
     },
-    "vite@6.0.7": {
+    "vite@6.0.7_sass@1.83.1": {
       "integrity": "sha512-RDt8r/7qx9940f8FcOIAH9PTViRrghKaK2K1jY3RaAURrEUbm9Du1mJ72G+jlhtG3WwodnfzY8ORQZbBavZEAQ==",
       "dependencies": [
         "esbuild",
         "fsevents",
         "postcss",
-        "rollup"
+        "rollup",
+        "sass"
       ]
     },
-    "vitefu@1.0.5_vite@6.0.7": {
+    "vitefu@1.0.5_vite@6.0.7__sass@1.83.1_sass@1.83.1": {
       "integrity": "sha512-h4Vflt9gxODPFNGPwp4zAMZRpZR7eslzwH2c5hn5kNZ5rhnKyRJ50U+yGCdc2IRaBs8O4haIgLNGrV5CrpMsCA==",
       "dependencies": [
         "vite"
@@ -720,15 +723,17 @@
   },
   "workspace": {
     "dependencies": [
-      "npm:@solidjs/router@~0.14.10"
+      "npm:@solidjs/router@*",
+      "npm:solid-js@*"
     ],
     "packageJson": {
       "dependencies": [
+        "npm:@solidjs/router@~0.14.10",
         "npm:sass@^1.83.1",
         "npm:solid-js@^1.9.3",
         "npm:typescript@~5.6.2",
         "npm:vite-plugin-solid@^2.11.0",
-        "npm:vite@^6.0.5"
+        "npm:vite@^6.0.7"
       ]
     }
   }

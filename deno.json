@@ -6,15 +6,46 @@
     "serve": {
       "command": "deno task dev:api",
       "description": "Run the build, and then start the API server",
-      "dependencies": ["deno task build"]
+      "dependencies": [
+        "deno task build"
+      ]
+    }
+  },
+  "fmt": {
+    "proseWrap": "preserve",
+    "lineWidth": 100000,
+    "include": [
+      "./src"
+    ],
+    "exclude": [
+      "./src/todo.ts"
+    ]
+  },
+  "lint": {
+    "rules": {
+      "include": [
+        "eqeqeq",
+        "no-external-import",
+        "no-self-compare",
+        "no-sparse-arrays",
+        "no-throw-literal",
+        "no-top-level-await"
+      ],
+      "exclude": []
     }
   },
   "imports": {
-    "@solidjs/router": "npm:@solidjs/router@^0.14.10"
+    "solid-js": "npm:solid-js",
+    "solid-js/web": "npm:solid-js/web",
+    "@solidjs/router": "npm:@solidjs/router"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "solid-js",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"]
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ]
   }
 }

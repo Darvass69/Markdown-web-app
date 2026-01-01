@@ -16,9 +16,9 @@ This is also a paragraph.
 
 ###### Heading 6
 
-**bold** __bold__
+**bold** **bold**
 
-_italic_ *its not Italian*
+_italic_ _its not Italian_
 
 ~~strikethrough~~
 
@@ -130,7 +130,7 @@ pretty cool.
 Find some great docs [here][docs]
 ```
 
-___
+---
 
 Can we make up an easy syntax for this?
 
@@ -177,6 +177,7 @@ __
 - [ ] Table
 
 ## Nesting rules
+
 - Headers
   - Nothing
 - Paragraph
@@ -205,3 +206,9 @@ __
   - Text only, no formatting.
 - Table
   - Everything? Just text?
+
+
+#### I am working on a new project. [^2]
+
+[^2]: a
+    # A Title

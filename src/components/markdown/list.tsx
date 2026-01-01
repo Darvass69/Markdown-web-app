@@ -1,54 +1,35 @@
-import { ParentProps } from "solid-js";
+import { FlowProps, ParentProps, Show } from "solid-js";
+import { Dynamic } from "solid-js/web";
 
-export function Ul(props: ParentProps) {
+export type ListProps = ParentProps & {
+  ordered?: boolean;
+};
+
+export type A = FlowProps<{}, typeof ListElement>;
+
+export function List(props: ListProps) {
   return (
-    <ul>
-      {props.children}
-    </ul>
+    <>
+      <Dynamic component={props.ordered ? "ol" : "ul"}>
+        {props.children}
+      </Dynamic>
+    </>
   );
 }
 
-export function UlElement(props: ParentProps) {
+export type ListElementProps = ParentProps & {
+  checkbox?: boolean;
+};
+
+export function ListElement(props: ListElementProps) {
   return (
-    <li>
-      {props.children}
-    </li>
-  );
-}
-
-/* -------------------------------------------------------------------------- */
-
-export function Ol(props: ParentProps) {
-  return (
-    <ol>
-      {props.children}
-    </ol>
-  );
-}
-
-export function OlElement(props: ParentProps) {
-  return (
-    <li>
-      {props.children}
-    </li>
-  );
-}
-
-/* -------------------------------------------------------------------------- */
-
-export function CheckedList(props: ParentProps) {
-  return (
-    <ul class="checked-list">
-      {props.children}
-    </ul>
-  );
-}
-
-export function CheckedListElement(props: ParentProps) {
-  return (
-    <li class="checked-list-element">
-      <input type="checkbox"></input>
-      {props.children}
-    </li>
+    <>
+      <li>
+        <Show when={props.checkbox}>
+          <input type="checkbox"></input>
+        </Show>
+        {props.children}
+      </li>
+    </>
   );
 }

@@ -1,0 +1,41 @@
+@startuml MDD
+skinparam style strictuml
+skinparam ArrowThickness 2
+skinparam ArrowColor #gray
+hide empty members
+title Modèle du domaine
+
+class Workspace {
+
+}
+
+class Page {
+  title: string
+}
+
+class Folder {
+  
+}
+
+class Component
+
+' Workspace "1" -- "*" Page : contains >
+
+Page "1" *-> "*" Component
+
+
+class Joueur {
+  nom : String
+  nbParties : int
+  nbPartiesGagnées : int
+}
+class Dé {
+  valeur : int
+}
+class JeuDeDés
+' associations
+Joueur "*" -down- "1" JeuDeDés : joue >
+Joueur "1" -right- "3" Dé : lance >
+JeuDeDés "1" -up- "3" Dé : inclut >
+
+@enduml

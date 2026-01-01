@@ -1,6 +1,6 @@
 export type LinkProps = {
   href: string;
-  children?: string;
+  children: string;
 };
 
 export function Link(props: LinkProps) {

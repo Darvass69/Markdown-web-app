@@ -1,5 +1,3 @@
-import { ParentProps } from "solid-js";
-
 export type CodeblockProps = {
   children?: string;
 };

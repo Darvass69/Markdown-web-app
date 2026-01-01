@@ -1,4 +1,4 @@
-import { TestContent } from "./content/testContent.tsx";
+import { PageLinks } from "../components/workspace/workspaceRouting.tsx";
 
 export function HomePage() {
   return (
@@ -6,7 +6,8 @@ export function HomePage() {
       <h1 class="title">
         Home
       </h1>
-      <TestContent />
+
+      {PageLinks()}
     </>
   );
 }
